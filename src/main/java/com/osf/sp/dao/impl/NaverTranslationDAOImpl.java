@@ -8,14 +8,16 @@ import javax.annotation.Resource;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
+import com.osf.sp.dao.NaverTranslationDAO;
+
 @Repository
-public class NaverTranslationDAOImpl {
+public class NaverTranslationDAOImpl implements NaverTranslationDAO{
 
 	@Resource
 	private SqlSession ss;
 	
 	public List<Map<String,Object>> selectTranslationHisList(){
-		return ss.selectList("com.osf.sp.mapper.NaverTranslationMapper.selectList");
+		return ss.selectList("NaverTranslationMapper.selectList");
 	}
 	
 	
