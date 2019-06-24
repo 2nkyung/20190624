@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+   
+   <!-- Root Context: defines shared resources visible to all other web components -->
+   
+   <context:component-scan base-package="com.osf.sp"/>
+   
+   <bean id="hikariDS" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+      <property name="jdbcUrl" value="jdbc:oracle:thin:@blueerp.clkpr9fwbjtz.ap-northeast-2.rds.amazonaws.com:1588:ORCL"/>
+      <property name="username" value="shim1105"/>
+      <property name="password" value="19920621"/>
+      <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+      <property name="maximumPoolSize" value="10"/>
+      <property name="minimumIdle" value="5"/>
+   </bean>
+   
+   <bean id="ssFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+      <property name="dataSource" ref="hikariDS"/>
+      <!-- <property name="configLocation" value="classpath:config/mybatis-config.xml"/> -->
+      <property name="mapperLocations" value="classpath:mapper/*.xml"></property>
+   </bean>
+   
+   <bean id="ss" class="org.mybatis.spring.SqlSessionTemplate">
+      <constructor-arg ref="ssFactory"/>
+   </bean>
+  
+</beans>

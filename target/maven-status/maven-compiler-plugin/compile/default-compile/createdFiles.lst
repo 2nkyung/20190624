@@ -1,0 +1,5 @@
+com\osf\sp\dao\NaverTranslationDAO.class
+com\spring\exam\controller\UserController.class
+com\spring\exam\controller\URIController.class
+com\osf\sp\controller\NaverTransController.class
+com\spring\exam\HomeController.class
