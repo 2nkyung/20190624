@@ -1,5 +1,6 @@
-D:\study\workspace\spring-exam\src\main\java\com\spring\exam\controller\URIController.java
-D:\study\workspace\spring-exam\src\main\java\com\spring\exam\controller\UserController.java
-D:\study\workspace\spring-exam\src\main\java\com\osf\sp\controller\NaverTransController.java
-D:\study\workspace\spring-exam\src\main\java\com\osf\sp\dao\NaverTranslationDAO.java
-D:\study\workspace\spring-exam\src\main\java\com\spring\exam\HomeController.java
+C:\Users\Administrator\git\201906242\src\main\java\com\osf\sp\controller\NaverTransController.java
+C:\Users\Administrator\git\201906242\src\main\java\com\spring\exam\HomeController.java
+C:\Users\Administrator\git\201906242\src\main\java\com\osf\sp\dao\impl\NaverTranslationDAOImpl.java
+C:\Users\Administrator\git\201906242\src\main\java\com\spring\exam\controller\URIController.java
+C:\Users\Administrator\git\201906242\src\main\java\com\osf\sp\dao\NaverTranslationDAO.java
+C:\Users\Administrator\git\201906242\src\main\java\com\spring\exam\controller\UserController.java
